@@ -1,6 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+/*
+Aurthor: Bradyn Corkill
+Date: 6/9/18
+ */
 
 public class CameraControl : MonoBehaviour {
 
