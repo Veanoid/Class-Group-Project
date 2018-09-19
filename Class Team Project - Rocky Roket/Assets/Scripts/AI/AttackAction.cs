@@ -8,7 +8,7 @@ using UnityEngine;
 
 public class AttackAction : Action {
     public GameObject enemyBullet;
-    public float bulletSpeed;
+    public int bulletSpeed;
     private Transform enemyBulletSpawn;
     float shootTimer;
     public override void Act(StateController controller)
