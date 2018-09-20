@@ -13,7 +13,7 @@ public class ChaseAction : Action {
 
     private void Chase(StateController controller)
     {
-        Debug.Log("chasing");
+        // Debug.Log("chasing");
         controller.transform.LookAt(controller.Target);
         controller.navMeshAgent.destination = controller.Target.position;
        // controller.navMeshAgent.Resume();

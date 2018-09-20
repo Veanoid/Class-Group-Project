@@ -8,12 +8,14 @@ using UnityEngine;
 
 public class AttackAction : Action {
     public GameObject enemyBullet;
+   
     public int bulletSpeed;
     private Transform enemyBulletSpawn;
     float shootTimer;
     public override void Act(StateController controller)
     {
         enemyBulletSpawn = GameObject.FindGameObjectWithTag("BulletSpawn").transform;
+
         Attack(controller);
     }
 
@@ -30,4 +32,5 @@ public class AttackAction : Action {
         }
 
     }
+   
 }

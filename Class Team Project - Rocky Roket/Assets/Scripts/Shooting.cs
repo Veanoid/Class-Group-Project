@@ -28,9 +28,12 @@ public class Shooting : MonoBehaviour {
 	{
 		//creating the bullet prefab
 		var bullet = (GameObject)Instantiate (bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+		
 		// add velocity to the bullet
 		bullet.GetComponent<Rigidbody>().velocity = bullet.transform.forward * speed;
-		// destroy bullet after 3 seconds
-		Destroy(bullet, 3.0f);
+		
+	
 	}
+
+	
 }

@@ -13,7 +13,7 @@ public class FleeAction : Action {
 
     private void Flee(StateController controller)
     {
-        Debug.Log("Fleeing");
+        // Debug.Log("Fleeing");
         //controller.transform.LookAt(controller.Target);
 
         //controller.navMeshAgent.destination = Vector3.zero;
