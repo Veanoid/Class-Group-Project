@@ -21,14 +21,18 @@ public class AttackAction : Action {
 
     private void Attack(StateController controller)
     {
+        //making the enemy always look at the player
         controller.transform.LookAt(controller.Target);
+        //creating a timer that limits the fire rate of the enemy
         shootTimer += Time.deltaTime;
-        if (shootTimer > 1)
+        if (shootTimer > 0.5f)
         {
+            //creatin gthe bullets
             GameObject enBull = Instantiate(enemyBullet, enemyBulletSpawn.position, enemyBulletSpawn.rotation);
+            //giving them rigidbody and moving them
             enBull.GetComponent<Rigidbody>().AddForce(enBull.transform.forward * bulletSpeed);
             shootTimer = 0;
-            Destroy(enBull, 3.0f);
+           
         }
 
     }

@@ -18,6 +18,8 @@ public class TooCloseDecision : Decision {
         LayerMask layerMask = 8;
         layerMask = ~layerMask;
         Debug.DrawRay(controller.bulletSpawn.transform.position, controller.bulletSpawn.transform.forward, Color.red);
+
+        //raycasting to see how close the player is to the enemy
         if (Physics.Raycast(controller.bulletSpawn.transform.position, controller.bulletSpawn.transform.forward, range, layerMask))
         {
             return true;

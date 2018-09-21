@@ -19,6 +19,7 @@ public class MenuActor : MonoBehaviour {
 
     public void LoadScene(string scene_Name)
     {
+		//loads the scene that is being called and setting the time back to normal
         SceneManager.LoadScene(scene_Name);
         Time.timeScale = 1.0f;
     }

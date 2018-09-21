@@ -14,7 +14,7 @@ public class Movement : MonoBehaviour {
 	void awake()
 	{
 		Speed = 10.0f;
-		RotationSpeed = 5.0f;
+		RotationSpeed = 10.0f;
 		//JumpHight = 2.0f;
 		print("Started Function");
 	}

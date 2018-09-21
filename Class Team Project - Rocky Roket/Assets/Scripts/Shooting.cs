@@ -8,7 +8,7 @@ Date: 13/09/2018
 public class Shooting : MonoBehaviour {
 	public GameObject bulletPrefab;
 	public Transform bulletSpawn;
-
+	float shootTime;
 	public int speed;
 
 	// Use this for initialization
@@ -19,10 +19,14 @@ public class Shooting : MonoBehaviour {
 	// Update is called once per frame
 	void Update () 
 	{
-		if(Input.GetKeyDown(KeyCode.Space))
+		// timer to set the amount shoot
+		shootTime += Time.deltaTime;
+		if(Input.GetKeyDown(KeyCode.Space) && shootTime > 0.5f)
 		{
-			Fire();
+			Fire(); // call function
+			shootTime = 0; // reset timer
 		}
+		
 	}
 	void Fire()
 	{

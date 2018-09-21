@@ -25,13 +25,13 @@ public class FleeAction : Action {
         {
 
          //   float distance = Vector3.Distance(controller.transform.position, controller.Target.position);
-
+            //finding the opposite direction to the player
             Vector3 dirToPlayer = controller.transform.position - controller.Target.position;
 
             dirToPlayer = dirToPlayer.normalized * 10.0f;
 
             Vector3 newPos = controller.transform.position + dirToPlayer;
-
+            //setting the destination of the navmesh agent
             controller.navMeshAgent.SetDestination(newPos);
             timer = 0;
         }

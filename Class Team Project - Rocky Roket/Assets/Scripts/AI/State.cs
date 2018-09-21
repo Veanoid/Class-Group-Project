@@ -19,6 +19,7 @@ public class State : ScriptableObject {
 
     private void DoActions(StateController controller)
     {
+        //actually performing the actions
         for (int i = 0; i < actions.Length; i++)
         {
         actions[i].Act(controller);
@@ -27,6 +28,7 @@ public class State : ScriptableObject {
 
     private void CheckTransitions(StateController controller)
     {
+        //checking if a decision succeeded so it will then transition into the next state
         for (int i = 0; i < transitions.Length; i++)
         {
             bool decisionSucceeded = transitions[i].decision.Decide(controller);

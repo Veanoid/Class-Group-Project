@@ -19,6 +19,7 @@ public class InRangeDecision : Decision {
         LayerMask layerMask = 8;
         layerMask = ~layerMask;
         Debug.DrawRay(controller.bulletSpawn.transform.position, controller.bulletSpawn.transform.forward, Color.blue);
+        //raycasting to see if the enemy is within range 
         if (Physics.Raycast(controller.bulletSpawn.transform.position, controller.bulletSpawn.transform.forward, range, layerMask))
         {
             return true;

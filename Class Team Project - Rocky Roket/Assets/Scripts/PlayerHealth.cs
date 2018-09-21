@@ -24,7 +24,7 @@ public class PlayerHealth : MonoBehaviour
 	void Update()
     {
    
-        
+        //having the slider value = the health value
           healthSlider.value = currentHealth;
          
     }
@@ -32,12 +32,14 @@ public class PlayerHealth : MonoBehaviour
 	{
 		if(collision.gameObject.tag == "EnemyShip")
 		{
-			Debug.Log(" Eenemy Ship Collision");
+			//Debug.Log(" Eenemy Ship Collision");
+			//reduce the current health if the player hits the enemy
 			currentHealth -= 10;
 		}
 		if(collision.gameObject.tag == "Asteroid")
 		{
-			Debug.Log("Asteriod Collision");
+			//Debug.Log("Asteriod Collision");
+			//reduce current health if the player hits an asteroid
 			currentHealth -= 10;
 		}
 	}

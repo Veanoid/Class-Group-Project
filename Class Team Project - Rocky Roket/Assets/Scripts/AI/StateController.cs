@@ -15,6 +15,7 @@ public class StateController : MonoBehaviour
 
     void Awake ()
     {
+        //getting the component of the navmeshagent
         navMeshAgent = GetComponent<NavMeshAgent>();
         //bulletSpawn = GameObject.FindGameObjectWithTag("BulletSpawn");
     }

@@ -21,17 +21,20 @@ public class ButtonScript : MonoBehaviour {
 
     public void Pause()
     {
+        //stops time and activates the pause panel
         Time.timeScale = 0.0f;
         pausePanel.SetActive(true);
     }
     public void Resume()
     {
+        //resumes time and deactivates the pause panel
         pausePanel.SetActive(false);
         Time.timeScale = 1.0f;
     }
 
     public void Quit()
     {
+        //closes the application
         Application.Quit();
     }
 
